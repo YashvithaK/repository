@@ -33,5 +33,37 @@
 	    
   </dependencies>
   
+  <developers>
+    <developer>
+      <id>Yash</id>
+      <name>Yashvitha Kanaparthy</name>
+      <email></email>
+      <url></url>
+      <organization>UP</organization>
+      <organizationUrl>http://www.example.com</organizationUrl>
+      <roles>
+        <role>developer</role>
+      </roles>
+      <timezone>Harare</timezone>
+      <properties>
+        <picUrl>http://www.example.com/yash/pic</picUrl>
+      </properties>
+    </developer>
+       <developer>
+      <id>Sovie</id>
+      <name>Sovie</name>
+      <email></email>
+      <url></url>
+      <organization>UP</organization>
+      <organizationUrl>http://www.example.com</organizationUrl>
+      <roles>
+        <role>developer</role>
+      </roles>
+      <timezone>Harare</timezone>
+      <properties>
+        <picUrl>http://www.example.com/yash/pic</picUrl>
+      </properties>
+    </developer>
+  	</developers>
   
 </project>
