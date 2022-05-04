@@ -26,7 +26,7 @@ pwd:
 JDBC Url:
 	String url = "jdbc:mariadb://localhost:3306/u19025492_u20450207_sakila";
 
-
+	
 Customer: 
 
 Display All Customer data from Customer Table
@@ -54,3 +54,25 @@ How to run the Jar(Java Archive) File:
 1. Double click JAR will launch the application OR
 2. command line run the below command
 	 Java -jar DvdApp.jar
+
+
+In the Application
+1. Refresh will load all Tables with Data
+2. 		tabPane.addTab("Client List", tablePanel1);
+		tabPane.addTab("Staff List", tablePanel2);
+		tabPane.addTab("Films List", tablePanel3);
+		tabPane.addTab("Inventory List", tablePanel4);
+3.Client List:
+	Coulmn: First Name Filed can be updated by double clicking on the field
+	Delete can be done by right clicking on the selected row
+
+4.Staff List:
+	First Name Filed can be updated by double clicking on the field
+	Delete can be done by right clicking on the selected row
+
+5.Film List:
+	Title Name Filed can be updated by double clicking on the field
+	Delete can be done by right clicking on the selected row
+
+6. Window Menu will show/hide customer input form
+7. File Menu Exit will terminate DB Connection and prompt the user to Do you really want to exit the application
