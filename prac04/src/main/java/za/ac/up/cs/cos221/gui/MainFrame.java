@@ -79,6 +79,18 @@ public class MainFrame extends JFrame {
 			}
 		});
 		
+		tablePanel2.setStaffTableListener(new StaffTableListener() {
+			public void rowDeleted(int row) {
+				controller.removeCustomer(row);
+			}
+		});
+		
+		tablePanel3.setFilmTableListener(new FilmTableListener() {
+			public void rowDeleted(int row) {
+				controller.removeCustomer(row);
+			}
+		});
+		
 		tabPane.addChangeListener(new ChangeListener() {
 			
 			public void stateChanged(ChangeEvent e) {
@@ -119,7 +131,6 @@ public class MainFrame extends JFrame {
 
 			public void refreshEventOccured() {
 				connect();
-				
 				try {
 					controller.loadCustomer();
 					controller.loadStaff();
@@ -140,8 +151,11 @@ public class MainFrame extends JFrame {
 			public void formEventOccurred(ClientFormEvent e) {
 				controller.addPerson(e);
 				tablePanel1.refresh();
+				tablePanel2.refresh();
+				tablePanel3.refresh();
 			}
 		});
+		
 		
 		addWindowListener(new WindowAdapter() {
 			public void windowClosing(WindowEvent arg0) {

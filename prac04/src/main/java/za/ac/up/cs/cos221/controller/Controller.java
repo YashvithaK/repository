@@ -29,7 +29,6 @@ public class Controller {
 		filmDao.removeFilm(index);
 	}
 	
-	
 	public List<Customer> getClients() {
 		return customerDao.getClients();
 	}
@@ -125,9 +124,9 @@ public class Controller {
 		String email = ev.getEmail();
 		boolean isActive = ev.isActive();
 		
-		Customer person = new Customer(firstname, lastname, email, isActive, 1, 444);
+		Customer client = new Customer(firstname, lastname, email, isActive, 1, 444);
 		
-		customerDao.addCustomer(person);
+		customerDao.addCustomer(client);
 	}
 	
 //	public void saveToFile(File file) throws IOException {

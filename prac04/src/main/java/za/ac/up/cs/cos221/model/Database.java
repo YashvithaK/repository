@@ -9,11 +9,11 @@ public class Database {
 	private Connection con;
 
 //	private String	SAKILA_DB_PROTO = "";
-	private String	SAKILA_DB_HOST = "localhost";
-	private String	SAKILA_DB_PORT = "3306";
-	private String	SAKILA_DB_NAME = "u19025492_u20450207_sakila";
-	private String	SAKILA_DB_USERNAME = "root";
-	private String	SAKILA_DB_PASSWORD = "";
+	private static String	SAKILA_DB_HOST = "localhost";
+	private static String	SAKILA_DB_PORT = "3306";
+	private static String	SAKILA_DB_NAME = "u19025492_u20450207_sakila";
+	private static String	SAKILA_DB_USERNAME = "root";
+	private static String	SAKILA_DB_PASSWORD = "";
 	
 	public Connection connect() throws Exception {
 

@@ -139,13 +139,13 @@ public class StaffDao{
 			try {
 				postal_code = results.getInt("postal_code");
 			} catch (Exception e) {
-				System.out.println("Empty Postal code.");
+//				System.out.println("Empty Postal code.");
 			}
 			int phone = 0;
 			try {
 				phone = results.getInt("phone");
 			} catch (Exception e) {
-				System.out.println("Empty Phone No.");
+//				System.out.println("Empty Phone No.");
 			}
 			
 			Address address = new Address(addressId, address1, address2, district, city_id, postal_code, phone);

@@ -74,7 +74,7 @@ public class TablePanel3 extends JPanel {
 		tableModel.fireTableDataChanged();
 	}
 	
-	public void setStaffTableListener(FilmTableListener listener) {
+	public void setFilmTableListener(FilmTableListener listener) {
 		this.filmTableListener = listener;
 	}
 }
