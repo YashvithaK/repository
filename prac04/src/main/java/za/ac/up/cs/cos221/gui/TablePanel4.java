@@ -18,6 +18,10 @@ import za.ac.up.cs.cos221.model.Staff;
 public class TablePanel4 extends JPanel {
 	
 	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 5637240831180878L;
+	/**
 	 *  Inventory  Table Panel 
 	 */
 	private JTable table;

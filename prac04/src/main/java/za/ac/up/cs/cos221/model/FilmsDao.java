@@ -47,7 +47,7 @@ private List<Film> filmList;
 			String title = results.getString("title");
 			String descr = results.getString("description");
 			String specialFeature = results.getString("special_features");
-			String rating = results.getString("rental_rate");
+//			String rating = results.getString("rental_rate");
 			
 			int releaseYear = 0;
 			try {

@@ -43,7 +43,7 @@ public class FormPanel extends JPanel {
 	private JCheckBox isActiveCheck;
 //	private JTextField taxField;
 
-	DefaultListModel addressModel = new DefaultListModel();
+//	DefaultListModel addressModel = new DefaultListModel();
 
 	public FormPanel() {
 		Dimension dim = getPreferredSize();

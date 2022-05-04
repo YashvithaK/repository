@@ -28,10 +28,8 @@ import za.ac.up.cs.cos221.controller.Controller;
 public class MainFrame extends JFrame {
 
 	private static final long serialVersionUID = 4775907780893361729L;
-//	private TextPanel textPanel;
 	private Toolbar toolbar;
 	private FormPanel formPanel;
-//	private JFileChooser fileChooser;
 	private Controller controller;
 	
 	private TablePanel tablePanel1;
@@ -113,11 +111,7 @@ public class MainFrame extends JFrame {
 		
 		prefsDialog.setDefaults(user, password, port);
 
-//		fileChooser = new JFileChooser();
-//		fileChooser.addChoosableFileFilter(new CustomerFileFilter());
-
 		setJMenuBar(createMenuBar());
-
 		toolbar.setToolbarListener(new ToolbarListener() {
 			public void saveEventOccured() {
 				connect();
