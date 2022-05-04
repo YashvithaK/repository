@@ -28,13 +28,22 @@ public class Toolbar extends JToolBar implements ActionListener {
 		
 		saveButton = new JButton();
 //		saveButton.setIcon(createIcon("/images/Save16.gif"));
-		saveButton.setIcon(createIcon("/za/ac/up/cs/cos221/images/Save16.gif"));
+//		saveButton.setIcon(createIcon("/za/ac/up/cs/cos221/images/Save16.gif"));
+		try {
+			saveButton.setIcon(createIcon("/za/ac/up/cs/cos221/images/Save16.gif"));
+		} catch (Exception e) {
+			saveButton.setText("Save");
+		}
 		saveButton.setToolTipText("Save");
 		
-		
-		
 		refreshButton = new JButton();
-		refreshButton.setIcon(createIcon("/za/ac/up/cs/cos221/images/Refresh16.gif"));
+//		refreshButton.setIcon(createIcon("/za/ac/up/cs/cos221/images/Refresh16.gif"));
+		try {
+			refreshButton.setIcon(createIcon("/za/ac/up/cs/cos221/images/Refresh16.gif"));
+		} catch (Exception e) {
+//			refreshButton.setIcon(createIcon("/images/Refresh16.gif"));
+			refreshButton.setText("Refresh");
+		}
 		refreshButton.setToolTipText("Refresh");
 		
 		saveButton.addActionListener(this);

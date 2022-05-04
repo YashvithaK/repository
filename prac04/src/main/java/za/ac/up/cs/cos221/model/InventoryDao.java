@@ -12,10 +12,9 @@ public class InventoryDao{
 		Database databaseMariaDb = new Database();
 		return databaseMariaDb.connect();
 	}
-	
 
 	//Use the JTabbedPane to add Staff, Films, Inventory and Clients to your application.
-    public void getDetails(String tenantDB) {
+    public void getDetails() {
         Connection c = null;
         Statement stmt = null;
         try {
@@ -26,12 +25,12 @@ public class InventoryDao{
             stmt = c.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT * from inventory");
             while (rs.next()) {
-                int customerId = rs.getInt("customer_id");
-                System.out.println("customerId = " + customerId);
-                int store_id = rs.getInt("store_id");
+                int inventory_id = rs.getInt("inventory_id");
+                System.out.println("customerId = " + inventory_id);
+                int film_id = rs.getInt("film_id");
+                System.out.println("film_id = " + film_id);
+                String store_id = rs.getString("store_id");
                 System.out.println("store_id = " + store_id);
-                String first_name = rs.getString("first_name");
-                System.out.println("first_name = " + first_name);
                 System.out.println();
             }
             rs.close();
