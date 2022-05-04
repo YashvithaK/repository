@@ -32,7 +32,7 @@ public class FormPanel2 extends JPanel {
 	private JTextField occupationField;
 	private JButton okBtn;
 	private FormListener formListener;
-	private JList ageList;
+//	private JList ageList;
 	private JComboBox empCombo;
 	private JCheckBox citizenCheck;
 	private JTextField taxField;
@@ -52,7 +52,7 @@ public class FormPanel2 extends JPanel {
 		occupationLabel = new JLabel("Occupation: ");
 		nameField = new JTextField(10);
 		occupationField = new JTextField(10);
-		ageList = new JList();
+//		ageList = new JList();
 		empCombo = new JComboBox();
 		citizenCheck = new JCheckBox();
 		taxField = new JTextField(10);
@@ -184,19 +184,19 @@ public class FormPanel2 extends JPanel {
 		// //////////Next row ///////////////////////////////////
 
 		gc.gridy++;
-
-		gc.weightx = 1;
-		gc.weighty = 0.2;
-
-		gc.gridx = 0;
-		gc.insets = new Insets(0, 0, 0, 5);
-		gc.anchor = GridBagConstraints.FIRST_LINE_END;
-		add(new JLabel("Age: "), gc);
-
-		gc.gridx = 1;
-		gc.anchor = GridBagConstraints.FIRST_LINE_START;
-		gc.insets = new Insets(0, 0, 0, 0);
-		add(ageList, gc);
+//
+//		gc.weightx = 1;
+//		gc.weighty = 0.2;
+//
+//		gc.gridx = 0;
+//		gc.insets = new Insets(0, 0, 0, 5);
+//		gc.anchor = GridBagConstraints.FIRST_LINE_END;
+//		add(new JLabel("Age: "), gc);
+//
+//		gc.gridx = 1;
+//		gc.anchor = GridBagConstraints.FIRST_LINE_START;
+//		gc.insets = new Insets(0, 0, 0, 0);
+//		add(ageList, gc);
 
 		// //////////Next row ///////////////////////////////////
 

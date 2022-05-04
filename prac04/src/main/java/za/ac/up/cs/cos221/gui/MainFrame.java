@@ -53,6 +53,7 @@ public class MainFrame extends JFrame {
 		formPanel = new FormPanel();
 		tablePanel1 = new TablePanel();
 		tablePanel2 = new TablePanel2();
+		tablePanel3 = new TablePanel3();
 		prefsDialog = new PrefsDialog(this);
 		tabPane = new JTabbedPane();
 		splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, formPanel, tabPane);
@@ -70,6 +71,7 @@ public class MainFrame extends JFrame {
 
 		tablePanel1.setData(controller.getClients());
 		tablePanel2.setData(controller.getStaff());
+		tablePanel3.setData(controller.getFilms());
 		
 		tablePanel1.setPersonTableListener(new CustomerTableListener() {
 			public void rowDeleted(int row) {
@@ -122,12 +124,14 @@ public class MainFrame extends JFrame {
 					controller.loadCustomer();
 					controller.loadStaff();
 					controller.loadAddress();
+					controller.loadFilm();
 				} catch (SQLException e) {
 					JOptionPane.showMessageDialog(MainFrame.this, "Unable to load from database.", "Database Connection Problem", JOptionPane.ERROR_MESSAGE);
 				}
 				
 				tablePanel1.refresh();
 				tablePanel2.refresh();
+				tablePanel3.refresh();
 //				formPanel.refresh();
 			}
 		});

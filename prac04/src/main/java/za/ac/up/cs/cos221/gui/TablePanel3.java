@@ -13,21 +13,24 @@ import javax.swing.JPopupMenu;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 
-import za.ac.up.cs.cos221.model.Staff;
+import za.ac.up.cs.cos221.model.Film;
 
 public class TablePanel3 extends JPanel {
-	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -3086828400270536726L;
 	/**
 	 *  Films  Table Panel 
 	 */
 	private JTable table;
-	private StaffTableModel tableModel;
+	private FilmTableModel tableModel;
 	private JPopupMenu popup;
-	private StaffTableListener staffTableListener;
+	private FilmTableListener filmTableListener;
 	
 	public TablePanel3() {
 		
-		tableModel = new StaffTableModel();
+		tableModel = new FilmTableModel();
 		table = new JTable(tableModel);
 		popup = new JPopupMenu();
 		
@@ -51,8 +54,8 @@ public class TablePanel3 extends JPanel {
 			public void actionPerformed(ActionEvent arg0) {
 				int row = table.getSelectedRow();
 				
-				if(staffTableListener != null) {
-					staffTableListener.rowDeleted(row);
+				if(filmTableListener != null) {
+					filmTableListener.rowDeleted(row);
 					tableModel.fireTableRowsDeleted(row, row);
 				}
 			}
@@ -63,15 +66,15 @@ public class TablePanel3 extends JPanel {
 		add(new JScrollPane(table), BorderLayout.CENTER);
 	}
 	
-	public void setData(List<Staff> db) {
+	public void setData(List<Film> db) {
 		tableModel.setData(db);
 	}
-	
+	 
 	public void refresh() {
 		tableModel.fireTableDataChanged();
 	}
 	
-	public void setStaffTableListener(StaffTableListener listener) {
-		this.staffTableListener = listener;
+	public void setStaffTableListener(FilmTableListener listener) {
+		this.filmTableListener = listener;
 	}
 }

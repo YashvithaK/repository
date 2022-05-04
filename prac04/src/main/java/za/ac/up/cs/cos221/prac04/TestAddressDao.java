@@ -5,8 +5,8 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.List;
 
-import za.ac.up.cs.cos221.model.Address;
-import za.ac.up.cs.cos221.model.AddressDao;
+import za.ac.up.cs.cos221.model.Film;
+import za.ac.up.cs.cos221.model.FilmsDao;
 /**
  * Connect to Database
  */
@@ -57,20 +57,35 @@ public class TestAddressDao {
 //			System.out.println(staff.getUsername());
 //    	}
     	
-    	AddressDao dao = new AddressDao();
+//    	AddressDao dao = new AddressDao();
+//    	try {
+//			dao.load();
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
+//    	List<Address> addrList = dao.getAddress();
+//    	for (Address addr : addrList) {
+//			System.out.println(addr.getAddress1());
+//			System.out.println(addr.getAddress2());
+//			System.out.println(addr.getDistrict());
+//			System.out.println(addr.getCityId());
+//			System.out.println(addr.getPostalCode());
+//    	}
+//    }
+    
+    	FilmsDao dao = new FilmsDao();
     	try {
 			dao.load();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-    	List<Address> addrList = dao.getAddress();
-    	for (Address addr : addrList) {
-			System.out.println(addr.getAddress1());
-			System.out.println(addr.getAddress2());
-			System.out.println(addr.getDistrict());
-			System.out.println(addr.getCityId());
-			System.out.println(addr.getPostalCode());
+    	List<Film> filmList = dao.getFilms();
+    	for (Film film : filmList) {
+			System.out.println(film.getFilmId());
+			System.out.println(film.getTitle());
+			System.out.println(film.getSpecialFeature());
+			System.out.println(film.getReleaseYear());
+			System.out.println(film.getRentalRate());
     	}
     }
-    
 }

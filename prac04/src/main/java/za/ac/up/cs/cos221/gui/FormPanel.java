@@ -91,7 +91,10 @@ public class FormPanel extends JPanel {
 			addrModel.addElement(new Addr(address.getId(), address.getAddress1()));
     	}
 		empCombo.setModel(addrModel);
-		empCombo.setSelectedIndex(0);
+		try {
+			empCombo.setSelectedIndex(0);
+		} catch (Exception e) {
+		}
 		empCombo.setEditable(false);
 		empCombo.setPreferredSize(new Dimension(120, 20));
 		
