@@ -123,8 +123,9 @@ public class Controller {
 //		int ageCatId = ev.getAgeCategory();
 		String email = ev.getEmail();
 		boolean isActive = ev.isActive();
+		int addId = ev.getAddressId();
 		
-		Customer client = new Customer(firstname, lastname, email, isActive, 1, 444);
+		Customer client = new Customer(firstname, lastname, email, isActive, 1, addId);
 		
 		customerDao.addCustomer(client);
 	}
